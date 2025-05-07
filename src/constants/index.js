@@ -109,7 +109,7 @@ export const PROJECTS = [
     link: "https://github.com/JENNAH-IMAD/Insect-detector",
     description: [
       "CNN-based application for insect classification with 95% accuracy",
-      "android mobile interface for easy field use",
+      "Android mobile interface for easy field use",
       "Image preprocessing pipeline for better detection",
       "Support for 15+ common insect species"
     ],
