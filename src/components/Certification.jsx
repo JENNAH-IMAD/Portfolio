@@ -1,76 +1,69 @@
 import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
-import C1 from "../assets/projects/C1.jpeg";
-import C2 from "../assets/projects/C2.jpeg";
-import C3 from "../assets/projects/C3.jpeg";
-import C4 from "../assets/projects/C4.jpeg";
-import C5 from "../assets/projects/C5.jpeg";
-import C6 from "../assets/projects/C6.jpeg";
-import C7 from "../assets/projects/C7.jpeg";
-import C8 from "../assets/projects/C8.jpeg";
-import C9 from "../assets/projects/C9.jpeg";
+import { CERTIFICATIONS_IMAGES } from "../constants";
+
 
 // Certificate Data
 const certifications = [
   { 
     id: 1, 
-    src: C1, 
+    src: CERTIFICATIONS_IMAGES.C1, 
     title: "Modeling Software Systems using UML", 
     issuer: "The Hong Kong University of Science and Technology",
     link: "https://www.coursera.org/account/accomplishments/verify/2G5A7W2SX97T" 
   },
   { 
     id: 2, 
-    src: C2, 
+    src: CERTIFICATIONS_IMAGES.C2, 
     title: "Android App Development", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/specialization/BFYBZ3TVW53L" 
   },
   { 
     id: 3, 
-    src: C3, 
+    src: CERTIFICATIONS_IMAGES.C3, 
     title: "Java FullStack Developer", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/specialization/Q3R6ZGNS69D2" 
   },
   { 
     id: 4, 
-    src: C4, 
+    src: CERTIFICATIONS_IMAGES.C4,  
     title: "Machine Learning with Python", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/verify/V273Y5SWFURZ" 
   },
   { 
     id: 5, 
-    src: C5, 
+    src: CERTIFICATIONS_IMAGES.C5, 
     title: "DevOps, Cloud, and Agile Foundations", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/specialization/WK7NPNM99Z3R" 
   },
   { 
     id: 6, 
-    src: C6, 
+    src: CERTIFICATIONS_IMAGES.C6, 
     title: "Advanced Topics and Future Trends in Database Technologies", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/verify/SMW3WW3KH9BR" 
   },
   { 
     id: 7, 
-    src: C7, 
+    src: CERTIFICATIONS_IMAGES.C7,  
     title: "Developing Back-End Apps with Node.js and Express", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/verify/PC5WLKE8WWTU" 
   },
   { 
     id: 8, 
-    src: C8, 
+    src: CERTIFICATIONS_IMAGES.C8, 
     title: "Building Scalable Java Microservices with Spring Boot and Spring Cloud", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/verify/N9JWG28TFYAU" 
   },
   { 
     id: 9, 
-    src: C9, 
+    src: CERTIFICATIONS_IMAGES.C9,
     title: "Advanced React", 
     issuer: "Coursera",
     link: "https://www.coursera.org/account/accomplishments/verify/QQH2N78B9X3U" 

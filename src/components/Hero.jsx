@@ -1,4 +1,4 @@
-import photo from "../assets/photo.jpg";
+import { InfoHero } from "../constants";
 import { HERO_CONTENT } from "../constants";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
@@ -11,8 +11,8 @@ const Hero = () => {
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:mt-12">
             <motion.img 
-              src={photo} 
-              alt="imad jennah" 
+              src={InfoHero.photo} 
+              alt={InfoHero.fullName} 
               className="border border-stone-900 rounded-3xl w-3/4 lg:w-1/2"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -67,7 +67,6 @@ const Hero = () => {
                 wrapper="span"
                 repeat={Infinity}
               />
-              {/* Curseur animé */}
               <motion.span 
                 className="absolute right-[-12px] text-stone-500"
                 animate={{ opacity: [1, 0, 1] }}
@@ -76,6 +75,7 @@ const Hero = () => {
                 |
               </motion.span>
             </motion.span>
+            
             <motion.p 
               className="my-2 max-w-lg py-6 text-xl leading-relaxed tracking-tighter"
               variants={{
@@ -86,8 +86,9 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
+
             <motion.a
-              href="src/assets/Resume.pdf"
+              href={InfoHero.resume}
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -106,7 +107,6 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Simple separator line at the bottom */}
       <motion.div 
         className="border-b border-neutral-800 w-full mt-10 mb-16"
         initial={{ width: 0 }}

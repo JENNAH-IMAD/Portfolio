@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import logo from "../assets/logo.png";
+import { InfoHero } from "../constants";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -81,7 +81,7 @@ const Navbar = () => {
         <div className="flex flex-shrink-0 items-center pl-2 md:pl-4 lg:pl-6">
           <a href="/" aria-label="Home">
             <motion.img 
-              src={logo} 
+              src={InfoHero.logo} 
               className="mx-2" 
               width={80}
               height={64}

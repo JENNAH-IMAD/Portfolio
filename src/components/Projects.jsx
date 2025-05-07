@@ -59,8 +59,8 @@ const ProjectItem = ({ project, index, isVisible }) => {
       >
         {project.title}
       </motion.h3>
-      <motion.p 
-        className="text-gray-300 mb-4"
+      <motion.ul 
+        className="text-gray-300 mb-4 list-disc list-inside space-y-2"
         initial={{ opacity: 0 }}
         animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
         transition={{ 
@@ -68,8 +68,12 @@ const ProjectItem = ({ project, index, isVisible }) => {
           delay: isVisible ? index * 0.08 + 0.2 : 0
         }}
       >
-        {project.description}
-      </motion.p>
+        {project.description.map((line, idx) => (
+          <motion.li key={idx}>
+            {line}
+          </motion.li>
+        ))}
+      </motion.ul>
       <motion.div 
         className="flex flex-wrap gap-2"
         initial={{ opacity: 0 }}
@@ -109,9 +113,9 @@ ProjectItem.propTypes = {
   project: PropTypes.shape({
     image: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    description: PropTypes.arrayOf(PropTypes.string).isRequired, // ✅ Correction hna
     technologies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    link: PropTypes.string.isRequired // <--- Assure-toi que chaque projet a bien un lien
+    link: PropTypes.string.isRequired
   }).isRequired,
   index: PropTypes.number.isRequired,
   isVisible: PropTypes.bool.isRequired

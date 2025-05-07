@@ -8,7 +8,7 @@ const careerData = [
     company: "EMSI",
     start: 2020,
     end: 2020,
-    color: "bg-green-500",
+    color: "bg-green-700",
     description: "Developed a basic frontend booking website as part of an academic project.",
     technologies: ["HTML", "CSS", "JavaScript"]
   },
@@ -17,7 +17,7 @@ const careerData = [
     company: "EMSI",
     start: 2021,
     end: 2021,
-    color: "bg-green-500",
+    color: "bg-green-700",
     description: "Built a desktop application for managing the school's IT asset inventory.",
     technologies: ["C#", "ADO.NET", "SQL Server", "Windows Forms"]
   },
@@ -26,7 +26,7 @@ const careerData = [
     company: "EMSI (Final Year Project)",
     start: 2022,
     end: 2022,
-    color: "bg-green-500",
+    color: "bg-green-700",
     description: "Built machine learning models to detect student performance patterns and integrated them into a Flask-based web application.",
     technologies: ["Python", "Scikit-Learn", "Pandas", "Flask"]
   },
@@ -35,7 +35,7 @@ const careerData = [
     company: "Eurafric Information",
     start: 2023,
     end: 2023,
-    color: "bg-blue-200",
+    color: "bg-blue-600",
     description: "Developed a full stack web application for assessing the DevOps and Agile maturity of development teams, using Spring Boot, Angular, and MySQL, with JWT-based role authentication.",
     technologies: ["Spring Boot", "Angular", "MySQL", "JWT", "REST API"]
   },
@@ -44,7 +44,7 @@ const careerData = [
     company: "Munisys",
     start: 2024,
     end: 2024,
-    color: "bg-blue-500",
+    color: "bg-blue-300",
     description: "Led the development of a full stack internal module using React.js and Spring Boot, implementing secure JWT-based authentication and integrating with SQL Server.",
     technologies: ["Spring Boot", "React.js", "SQL Server", "JWT", "REST API"]
   }
@@ -80,14 +80,14 @@ const JobItem = ({ job, index, isVisible }) => {
     }
   }, [isVisible, index, itemControls]);
 
-  const badgeColor = job.color === 'bg-green-500'
-    ? 'bg-green-600'
+  const badgeColor = job.color === 'bg-green-700'
+    ? 'bg-green-700'
     : job.color === 'bg-blue-200'
     ? 'bg-blue-300'
     : 'bg-blue-600';
 
-  const titleColor = job.color === 'bg-green-500'
-    ? 'text-green-400'
+  const titleColor = job.color === 'bg-green-700'
+    ? 'text-green-700'
     : job.color === 'bg-blue-200'
     ? 'text-blue-300'
     : 'text-blue-500';

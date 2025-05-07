@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import logoImg from '../assets/logo.png';
+import { InfoHero } from "../constants";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         {/* Logo à gauche */}
         <div className="mb-4 md:mb-0">
           <img 
-            src={logoImg} 
+            src={InfoHero.logo} 
             alt="Logo" 
             className="h-10" 
           />

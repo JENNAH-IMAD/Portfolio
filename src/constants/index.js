@@ -1,8 +1,27 @@
-import project1 from "../assets/projects/project-1.jpg";
-import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
-import project5 from "../assets/projects/project-5.jpg";
+export const PROJECT_IMAGES = {
+  project1: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/project-1.jpg",
+  project2: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/project-2.jpg",
+  project3: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/project-3.jpg",
+  project4: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/project-4.jpg",
+  project5: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/project-5.jpg",
+};
+export const InfoHero = {
+  logo:  "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/logo.png",
+  photo: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/photo.jpg",
+  slogo: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/slogo.png",
+  resume:"https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/Resume.pdf",
+};
+export const CERTIFICATIONS_IMAGES = {
+  C1: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C1.jpeg",
+  C2: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C2.jpeg",
+  C3: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C3.jpeg",
+  C4: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C4.jpeg",
+  C5: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C5.jpeg",
+  C6: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C6.jpeg",
+  C7: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C7.jpeg",
+  C8: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C8.jpeg",
+  C9: "https://raw.githubusercontent.com/JENNAH-IMAD/Portfolio/refs/heads/main/src/assets/projects/C9.jpeg",
+};
 
 export const HERO_CONTENT = "I am a computer and network engineer specialized in MIAGE (Computer Methods Applied to Business Management). Passionate about software development and new technologies, I have worked on several projects using Spring Boot, React, Angular, and Machine Learning. I also have solid skills in project management, particularly in project study, analysis, and UML-based design. I apply structured and scalable approaches to build efficient solutions. Constantly learning and improving, I enjoy tackling challenges and delivering high-quality digital products. I am currently seeking a new opportunity to grow professionally and contribute to meaningful projects.";
 
@@ -50,7 +69,7 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "IT Equipment Management System",
-    image: project1,
+    image: PROJECT_IMAGES.project1,
     link: "https://github.com/JENNAH-IMAD/Application-web-de-gestion-des-demandes-des-equipements",
     description: [
       "Full-stack module for managing IT equipment requests with approval workflow",
@@ -62,7 +81,7 @@ export const PROJECTS = [
   },
   {
     title: "DevOps Maturity Assessment",
-    image: project2,
+    image: PROJECT_IMAGES.project2,
     link: "#",
     description: [
       "Web application for evaluating DevOps practices maturity level",
@@ -74,7 +93,7 @@ export const PROJECTS = [
   },
   {
     title: "Portfolio",
-    image: project3,
+    image: PROJECT_IMAGES.project3,
     link: "#",
     description: [
       "Interactive modern portfolio showcasing projects and skills",
@@ -86,7 +105,7 @@ export const PROJECTS = [
   },
   {
     title: "Insect Detection App",
-    image: project4,
+    image: PROJECT_IMAGES.project4,
     link: "https://github.com/JENNAH-IMAD/Insect-detector",
     description: [
       "CNN-based application for insect classification with 95% accuracy",
@@ -98,7 +117,7 @@ export const PROJECTS = [
   },
   {
     title: "Meeting Planner System Web Application",
-    image: project5,
+    image: PROJECT_IMAGES.project5,
     link: "https://github.com/JENNAH-IMAD/Meeting-Planner",
     description: [
       "Web application for managing and planning team meetings",
