@@ -1,7 +1,8 @@
-import { useEffect, useRef, useCallback } from "react";
+﻿import { useEffect, useRef, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import PropTypes from 'prop-types';
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { PROJECTS } from "../constants";
+import { PROJECTS_META } from "../constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import useMagnetic from "../hooks/useMagnetic";
@@ -17,7 +18,7 @@ MagneticButton.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const ProjectCard = ({ project, index }) => {
+const ProjectCard = ({ project, index, labels }) => {
   const cardRef = useRef(null);
   const badgesRef = useRef([]);
   const imageRef = useRef(null);
@@ -155,7 +156,7 @@ const ProjectCard = ({ project, index }) => {
             className="flex items-center gap-2 text-xs bg-neutral-800 hover:bg-neutral-700 text-gray-300 hover:text-white px-3 py-2 rounded-lg transition-all duration-200"
           >
             <FaGithub className="text-base" />
-            GitHub
+            {labels.github}
           </MagneticButton>
         )}
         {project.previewLink && (
@@ -166,7 +167,7 @@ const ProjectCard = ({ project, index }) => {
             className="flex items-center gap-2 text-xs border border-neutral-600 hover:border-neutral-400 text-gray-300 hover:text-white px-3 py-2 rounded-lg font-medium transition-all duration-200"
           >
             <FaExternalLinkAlt className="text-base" />
-            Live Preview
+            {labels.live}
           </MagneticButton>
         )}
       </div>
@@ -184,12 +185,27 @@ ProjectCard.propTypes = {
     previewLink: PropTypes.string,
   }).isRequired,
   index: PropTypes.number.isRequired,
+  labels: PropTypes.shape({
+    github: PropTypes.string.isRequired,
+    live: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 const Projects = () => {
+  const { t } = useTranslation();
   const titleRef = useRef(null);
   const lineRef = useRef(null);
   const subtitleRef = useRef(null);
+
+  const projectTexts = t("projects.items", { returnObjects: true });
+  const projects = Array.isArray(projectTexts)
+    ? PROJECTS_META.map((meta, index) => ({ ...meta, ...projectTexts[index] }))
+    : PROJECTS_META;
+
+  const labels = {
+    github: t("projects.buttons.github"),
+    live: t("projects.buttons.live"),
+  };
 
   useEffect(() => {
     gsap.fromTo(titleRef.current,
@@ -215,18 +231,18 @@ const Projects = () => {
   return (
     <div id="projects" className="border-b border-neutral-800 py-24">
       <div ref={titleRef} className="pb-2 w-full text-center" style={{ opacity: 0 }}>
-        <h1 className="my-2 text-center text-4xl">Projects</h1>
+        <h1 className="my-2 text-center text-4xl">{t("projects.title")}</h1>
         <div ref={lineRef} className="h-1 w-24 bg-gray-500 mx-auto mt-2 origin-left" style={{ transform: "scaleX(0)" }} />
       </div>
 
       <div className="container mx-auto px-4 md:px-6">
         <p ref={subtitleRef} className="text-gray-400 text-center mb-10" style={{ opacity: 0 }}>
-          Here are some of the projects I&apos;ve worked on. Click a card or the Live Preview button to explore.
+          {t("projects.subtitle")}
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" style={{ perspective: "1000px" }}>
-          {PROJECTS.map((project, index) => (
-            <ProjectCard key={index} project={project} index={index} />
+          {projects.map((project, index) => (
+            <ProjectCard key={index} project={project} index={index} labels={labels} />
           ))}
         </div>
       </div>

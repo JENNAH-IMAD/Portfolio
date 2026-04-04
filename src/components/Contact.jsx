@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { CONTACT } from "../constants/index";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import PropTypes from 'prop-types';
@@ -56,12 +57,16 @@ ContactItem.propTypes = {
 };
 
 const Contact = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const lineRef = useRef(null);
   const subtitleRef = useRef(null);
 
-  const emailAddress = "imad.jennah.pro@gmail.com";
+  const emailAddress = CONTACT.email;
+  const emailSubject = t("contact.email.subject");
+  const emailBody = t("contact.email.body");
+  const emailLink = `mailto:${emailAddress}?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -89,24 +94,22 @@ const Contact = () => {
   }, []);
 
   const contactItems = [
-    { icon: <FaMapMarkerAlt />, label: "Address", value: CONTACT.address },
-    { icon: <FaPhone />, label: "Phone", value: CONTACT.phoneNo },
-    { icon: <FaEnvelope />, label: "Email", value: emailAddress, link: `mailto:${emailAddress}?subject=Hello%20Imad&body=Hi%20Imad,` },
-    { icon: <FaLinkedin />, label: "LinkedIn", value: "LinkedIn Profile", link: CONTACT.linkedin },
+    { icon: <FaMapMarkerAlt />, label: t("contact.labels.address"), value: t("contact.values.address") },
+    { icon: <FaPhone />, label: t("contact.labels.phone"), value: CONTACT.phoneNo },
+    { icon: <FaEnvelope />, label: t("contact.labels.email"), value: emailAddress, link: emailLink },
+    { icon: <FaLinkedin />, label: t("contact.labels.linkedin"), value: t("contact.values.linkedin"), link: CONTACT.linkedin },
   ];
 
   return (
     <div ref={sectionRef} id="contact" className="border-b border-neutral-800 py-24">
       <div ref={titleRef} className="pb-2 w-full text-center" style={{ opacity: 0 }}>
-        <h1 className="my-2 text-center text-4xl">Contact</h1>
+        <h1 className="my-2 text-center text-4xl">{t("contact.title")}</h1>
         <div ref={lineRef} className="h-1 w-24 bg-gray-500 mx-auto mt-2 origin-left" style={{ transform: "scaleX(0)" }} />
       </div>
 
       <div className="container mx-auto px-6 max-w-2xl">
         <p ref={subtitleRef} className="text-gray-400 text-center mb-8" style={{ opacity: 0 }}>
-          I am always on the lookout for new challenges and opportunities to learn and grow.
-          If you have a project or idea that you think I could help with, I would love to hear from you.
-          Please feel free to get in touch through any of the contact methods below.
+          {t("contact.subtitle")}
         </p>
 
         {contactItems.map((item, index) => (

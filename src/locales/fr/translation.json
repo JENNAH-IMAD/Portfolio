@@ -1,0 +1,367 @@
+﻿{
+  "meta": {
+    "title": "ImFix | Jennah Imad",
+    "description": "Portfolio full-stack de Jennah Imad, avec projets, expériences et certifications en développement logiciel.",
+    "ogTitle": "ImFix | Jennah Imad",
+    "ogDescription": "Portfolio full-stack de Jennah Imad, avec projets, expériences et certifications en développement logiciel."
+  },
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "technologies": "Technologies",
+    "timeline": "Parcours",
+    "experiences": "Expériences",
+    "projects": "Projets",
+    "certification": "Certifications",
+    "contact": "Contact",
+    "toggleMenu": "Ouvrir le menu"
+  },
+  "language": {
+    "label": "Langue",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "hero": {
+    "roles": [
+      "Ingénieur logiciel",
+      "Développeur Web Full-Stack",
+      "Étude & Conception de projets",
+      "Machine Learning",
+      "Data Scientist & Analyste"
+    ],
+    "description": "Je suis ingénieur en informatique et réseaux, spécialisé en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises). Passionné par le développement logiciel et les nouvelles technologies, j'ai travaillé sur plusieurs projets utilisant Spring Boot, React, Angular et le Machine Learning. Je dispose également de solides compétences en gestion de projet, notamment en étude de projet, analyse et conception UML. J'applique des approches structurées et évolutives pour construire des solutions efficaces. Toujours en apprentissage et en amélioration continue, j'aime relever des défis et livrer des produits numériques de haute qualité. Je suis actuellement à la recherche d'une nouvelle opportunité pour évoluer professionnellement et contribuer à des projets à fort impact.",
+    "cta": "Télécharger le CV",
+    "scroll": "Défiler"
+  },
+  "preloader": {
+    "subtitle": "Développeur Full Stack"
+  },
+  "marquee": {
+    "primary": [
+      "Développeur Full Stack",
+      "React",
+      "Spring Boot",
+      "Angular",
+      "Next.js",
+      "Python",
+      "Machine Learning",
+      "DevOps",
+      "Java",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Tailwind CSS",
+      ".NET"
+    ],
+    "secondary": [
+      "Projets",
+      "Innovation",
+      "Développement Web",
+      "Applications mobiles",
+      "IA",
+      "Cloud",
+      "Microservices",
+      "API REST",
+      "Agile",
+      "CI/CD",
+      "Design UX",
+      "Open Source"
+    ]
+  },
+  "about": {
+    "title": "À propos de moi",
+    "subtitle": "Spécialiste en ingénierie informatique et réseaux, avec un focus sur la MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises)",
+    "sections": [
+      "Je suis <highlight>ingénieur en informatique et réseaux</highlight>, spécialisé en MIAGE (Méthodes Informatiques Appliquées à la Gestion des Entreprises). Mon profil combine <highlight>expertise technique</highlight> et vision stratégique orientée business.",
+      "Mon parcours a commencé à <emsiLink><emsi>École Marocaine des Sciences de l'Ingénierie (EMSI)</emsi></emsiLink> à Casablanca, où j'ai suivi mon cycle ingénieur de 2019 à 2024. Avant cela, j'ai effectué deux années préparatoires et obtenu mon <highlight>Baccalauréat en Sciences Physiques</highlight> à l'Institut MAJORELLE.",
+      "Au cours de mon parcours académique, j'ai développé un <highlight>ensemble de compétences polyvalent</highlight> allant du développement logiciel à la data science et au machine learning. Cette diversité me permet d'aborder les défis IT sous différents angles, en combinant <highlight>compréhension technique</highlight> et vision de gestion.",
+      "Dernièrement, j'ai effectué un stage chez <munisysLink><munisys>MUNISYS</munisys></munisysLink> (mars à septembre 2024), où j'ai conçu et développé un module de gestion des demandes d'équipements IT, en utilisant <spring>Spring</spring>, <react>React.js</react>, <ant>AntDesign</ant> et <sqlServer>SQL Server</sqlServer>.",
+      "Avant cela, j'ai réalisé un stage chez <eurafricLink><eurafric>EURAFRIC</eurafric></eurafricLink> (juillet à septembre 2023) en tant que développeur web full-stack, en créant une application pour évaluer la maturité des équipes DevOps et Agile avec <spring>Spring</spring>, <angular>Angular</angular>, <bootstrap>Bootstrap</bootstrap> et <mysql>MySQL</mysql>.",
+      "Mes projets académiques incluent le développement d'une <highlight>application web de gestion de stock</highlight>, d'un système de gestion de parc informatique, et d'une application de détection d'insectes utilisant <cnn>CNN (Convolutional Neural Network)</cnn> avec <flutter>Flutter</flutter> et <python>Python</python>.",
+      "Je maîtrise plusieurs <highlight>langages et frameworks</highlight> dont <cpp>C/C++</cpp>, <csharp>C#/ADO.net</csharp>, <java>Java</java>/<spring>Spring</spring>, <python>Python</python> avec <django>Django</django>/<flask>Flask</flask>/<tensorflow>TensorFlow</tensorflow>, et <javascript>JavaScript</javascript> avec <node>Node.js</node>, <react>React</react> et <angular>Angular</angular>. Mon expertise en bases de données couvre <mysql>MySQL</mysql>, <sql>SQL</sql>, <plsql>PL/SQL</plsql>, <nosql>NoSQL</nosql>, <postgres>PostgreSQL</postgres> et <mongo>MongoDB</mongo>.",
+      "Je suis actuellement à la recherche de nouveaux <highlight>défis professionnels</highlight> où je pourrai mobiliser pleinement mes compétences et contribuer de manière significative à des <highlight>projets innovants</highlight>."
+    ]
+  },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "Voici quelques technologies que je maîtrise et que j'utilise dans mes projets de développement."
+  },
+  "timeline": {
+    "title": "Parcours",
+    "subtitle": "Mon parcours professionnel et mon expérience dans le domaine du développement logiciel.",
+    "items": [
+      {
+        "title": "Projet académique - Site web front-end",
+        "company": "EMSI",
+        "start": 2020,
+        "end": 2020,
+        "description": "Développement d'un site de réservation front-end de base dans le cadre d'un projet académique.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+      },
+      {
+        "title": "Projet académique - Application desktop",
+        "company": "EMSI",
+        "start": 2021,
+        "end": 2021,
+        "description": "Création d'une application desktop pour gérer l'inventaire des actifs IT de l'école.",
+        "technologies": ["C#", "ADO.NET", "SQL Server", "Windows Forms"]
+      },
+      {
+        "title": "Projet académique - Développeur Machine Learning",
+        "company": "EMSI (Projet de fin d'études)",
+        "start": 2022,
+        "end": 2022,
+        "description": "Création de modèles de machine learning pour détecter des tendances de performance des étudiants et intégration dans une application web basée sur Flask.",
+        "technologies": ["Python", "Scikit-Learn", "Pandas", "Flask"]
+      },
+      {
+        "title": "Stagiaire développeur web full-stack",
+        "company": "Eurafric Information",
+        "start": 2023,
+        "end": 2023,
+        "description": "Développement d'une application web full-stack pour évaluer la maturité DevOps et Agile des équipes, avec Spring Boot, Angular et MySQL, et authentification par rôles via JWT.",
+        "technologies": ["Spring Boot", "Angular", "MySQL", "JWT", "REST API"]
+      },
+      {
+        "title": "Stagiaire développeur web full-stack",
+        "company": "Munisys",
+        "start": 2024,
+        "end": 2024,
+        "description": "Pilotage du développement d'un module interne full-stack en React.js et Spring Boot, avec authentification JWT sécurisée et intégration SQL Server.",
+        "technologies": ["Spring Boot", "React.js", "SQL Server", "JWT", "REST API"]
+      },
+      {
+        "title": "Développeur web full-stack freelance",
+        "company": "Remote",
+        "start": 2025,
+        "end": 2025,
+        "description": "Conception et déploiement d'une application web full-stack pour la gestion des réservations de salles de réunion, avec ASP.NET Core Web API, React.js, Tailwind CSS et PostgreSQL, déployée sur Azure/AWS.",
+        "technologies": ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Expérience",
+    "subtitle": "Mon parcours professionnel et les rôles qui ont façonné mon expertise en développement logiciel.",
+    "skillsTitle": "Compétences",
+    "items": [
+      {
+        "year": "02/2025 - 06/2025",
+        "role": "Développeur web full-stack freelance",
+        "company": "Remote",
+        "description": [
+          "Conception, développement et déploiement d'une application web full-stack de gestion des réservations de salles de réunion pour une entreprise. Backend en ASP.NET Core Web API et frontend en React.js et Tailwind CSS, avec base PostgreSQL. Déploiement sur Azure/AWS pour la scalabilité et la fiabilité. Ce projet freelance a renforcé ma capacité à gérer de manière autonome tout le cycle de développement, de la collecte des besoins à la mise en production."
+        ],
+        "technologies": ["ASP.NET Core Web API", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+      },
+      {
+        "year": "03/2024 - 09/2024",
+        "role": "Stagiaire développeur web full-stack",
+        "company": "Munisys - Ville Verte Bouskoura",
+        "description": [
+          "En tant que stagiaire développeur web full-stack, j'ai piloté le développement d'un module interne clé, en collaboration directe avec les parties prenantes pour recueillir les besoins et les transformer en solution scalable et maintenable. J'ai conçu des architectures backend robustes avec Spring Boot et développé des interfaces réactives avec React.js. Tout au long du projet, j'ai mis l'accent sur la sécurité en implémentant l'authentification JWT et assuré une intégration fluide avec SQL Server. Cette expérience a renforcé mes capacités de résolution de problèmes et ma compréhension des environnements logiciels d'entreprise."
+        ],
+        "technologies": ["Spring Boot", "React.js", "AntDesign", "SQL Server", "JWT", "REST API"]
+      },
+      {
+        "year": "07/2023 - 09/2023",
+        "role": "Stagiaire développeur web full-stack",
+        "company": "Eurafric Information - Ville Verte Bouskoura",
+        "description": [
+          "Lors de ce stage, j'ai développé une application web full-stack pour évaluer la maturité DevOps et Agile des équipes. J'ai conçu et implémenté la solution avec Spring Boot, Angular et MySQL, en intégrant un contrôle d'accès par rôles via JWT. Ce projet m'a permis d'aborder l'alignement des besoins métiers avec les solutions techniques, l'optimisation des performances backend et l'amélioration de l'expérience utilisateur, renforçant ainsi ma polyvalence technique."
+        ],
+        "technologies": ["Spring Boot", "Angular", "Bootstrap", "MySQL", "JWT", "REST API"]
+      },
+      {
+        "year": "12/2023 - 02/2024",
+        "role": "Projet académique - Chef d'équipe",
+        "company": "EMSI Casablanca",
+        "description": [
+          "En tant que chef d'équipe de ce projet académique, j'ai géré la planification, la répartition des tâches et la livraison d'une application web full-stack de gestion d'inventaire. Le système a été développé avec Angular, Spring Boot et MySQL, avec authentification JWT pour les rôles admin et utilisateur. J'ai appliqué les méthodes agiles, animé les stand-ups et veillé au respect des délais, tout en assurant la communication avec les parties prenantes. Cette expérience a renforcé mes compétences de leadership, d'organisation et de technique."
+        ],
+        "technologies": ["Spring Boot", "Angular", "Bootstrap", "MySQL", "JWT", "REST API"]
+      },
+      {
+        "year": "06/2022 - 09/2022",
+        "role": "Projet académique - Développeur backend",
+        "company": "EMSI Casablanca",
+        "description": [
+          "Dans ce projet académique, je me suis concentré sur le développement des composants backend d'une application desktop dédiée à la gestion des actifs IT. J'ai conçu un schéma de base de données relationnelle efficace et implémenté la logique métier avec C# et ADO.NET. Cette expérience a renforcé ma compréhension de l'architecture logicielle Windows et de la gestion de l'intégrité des données et des performances."
+        ],
+        "technologies": ["C#", "ADO.NET", "SQL Server", "Windows Forms"]
+      }
+    ],
+    "skills": [
+      {
+        "label": "Front-end",
+        "items": ["React.js", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Bootstrap", "AntDesign", "Redux Toolkit", "Zustand", "TanStack Query", "Framer Motion", "HTML5", "CSS3", "Vite"]
+      },
+      {
+        "label": "Back-end",
+        "items": ["Spring Boot", "ASP.NET Core", "Node.js", "Django", "Flask", "Entity Framework Core", "SignalR", "REST API", "JWT", "Swagger", "Serilog"]
+      },
+      {
+        "label": "Langages",
+        "items": ["Java", "Python", "JavaScript", "TypeScript", "C#", "C", "C++"]
+      },
+      {
+        "label": "Base de données",
+        "items": ["PostgreSQL", "MySQL", "SQL Server", "MongoDB"]
+      },
+      {
+        "label": "DevOps & Cloud",
+        "items": ["Docker", "Docker Compose", "Nginx", "Git", "GitHub Actions", "Google Cloud Platform", "Terraform", "Vercel"]
+      },
+      {
+        "label": "Temps réel & Média",
+        "items": ["SignalR", "WebRTC", "WebSocket"]
+      },
+      {
+        "label": "Systèmes & Infra",
+        "items": ["Linux (Ubuntu)", "Windows Server", "Bash", "PowerShell", "VirtualBox"]
+      },
+      {
+        "label": "Méthodologie",
+        "items": ["Agile", "Scrum", "UML", "MERISE"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Voici quelques projets sur lesquels j'ai travaillé. Cliquez sur une carte ou sur le bouton Aperçu pour explorer.",
+    "buttons": {
+      "github": "GitHub",
+      "live": "Aperçu"
+    },
+    "items": [
+      {
+        "title": "Système de gestion des équipements IT",
+        "description": [
+          "Module full-stack pour gérer les demandes d'équipements IT avec workflow d'approbation",
+          "Réduction de 40 % du temps de traitement grâce à l'automatisation",
+          "Contrôle d'accès par rôles pour différents niveaux organisationnels",
+          "Tableaux de bord interactifs pour le suivi en temps réel"
+        ]
+      },
+      {
+        "title": "Évaluation de la maturité DevOps",
+        "description": [
+          "Application web pour évaluer le niveau de maturité des pratiques DevOps",
+          "Questionnaire dynamique avec embranchements conditionnels",
+          "Algorithmes de scoring sur 5 dimensions de capacité",
+          "Benchmarking par rapport aux standards du secteur"
+        ]
+      },
+      {
+        "title": "Portfolio",
+        "description": [
+          "Portfolio moderne et interactif mettant en valeur projets et compétences",
+          "Design responsive pour tous les formats d'écran",
+          "Animations pour une expérience utilisateur renforcée",
+          "Mise en page propre et professionnelle"
+        ]
+      },
+      {
+        "title": "Application de détection d'insectes",
+        "description": [
+          "Application basée sur CNN pour la classification d'insectes avec 95 % de précision",
+          "Interface mobile Android pour une utilisation terrain simplifiée",
+          "Pipeline de prétraitement d'images pour améliorer la détection",
+          "Support de plus de 15 espèces d'insectes courantes"
+        ]
+      },
+      {
+        "title": "Application web de planification de réunions",
+        "description": [
+          "Application web pour gérer et planifier les réunions d'équipe",
+          "Système de réservation de salles basé sur les disponibilités",
+          "Planification sans conflits pour optimiser les agendas",
+          "Interface conviviale pour réserver et gérer les réunions"
+        ]
+      },
+      {
+        "title": "Restaurant Kechmara",
+        "description": [
+          "Site web de restaurant moderne avec design élégant et animations fluides",
+          "Mise en page responsive optimisée pour tous les écrans",
+          "Mise en avant interactive du menu avec sections dynamiques",
+          "Déployé sur Vercel pour une disponibilité rapide et globale"
+        ]
+      },
+      {
+        "title": "Team Talk - Réservation de salles de réunion",
+        "description": [
+          "Application web full-stack pour gérer les réservations de salles de réunion",
+          "Backend ASP.NET Core Web API et frontend React.js",
+          "Base PostgreSQL pour une persistance fiable des données",
+          "Déployé sur Azure/AWS pour la scalabilité et la disponibilité"
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "subtitle": "Des certifications professionnelles qui reflètent mon engagement envers l'apprentissage continu et la progression.",
+    "view": "Voir le certificat",
+    "items": [
+      {
+        "title": "Modeling Software Systems using UML",
+        "issuer": "Coursera · Hong Kong University"
+      },
+      {
+        "title": "Android App Development",
+        "issuer": "Coursera · Specialization"
+      },
+      {
+        "title": "Java FullStack Developer",
+        "issuer": "Coursera · Specialization"
+      },
+      {
+        "title": "Machine Learning with Python",
+        "issuer": "Coursera · IBM"
+      },
+      {
+        "title": "DevOps, Cloud, and Agile Foundations",
+        "issuer": "Coursera · IBM"
+      },
+      {
+        "title": "Advanced Topics in Database Technologies",
+        "issuer": "Coursera · Professional Certificate"
+      },
+      {
+        "title": "Back-End Apps with Node.js and Express",
+        "issuer": "Coursera · IBM"
+      },
+      {
+        "title": "Scalable Java Microservices with Spring Boot",
+        "issuer": "Coursera · Google Cloud"
+      },
+      {
+        "title": "Advanced React",
+        "issuer": "Coursera · Meta"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Je suis toujours à la recherche de nouveaux défis et d'opportunités d'apprendre et de progresser. Si vous avez un projet ou une idée pour laquelle vous pensez que je peux aider, je serais ravi d'en discuter. N'hésitez pas à me contacter via l'un des moyens ci-dessous.",
+    "labels": {
+      "address": "Adresse",
+      "phone": "Téléphone",
+      "email": "Email",
+      "linkedin": "LinkedIn"
+    },
+    "values": {
+      "address": "Casablanca, Maroc",
+      "linkedin": "Profil LinkedIn"
+    },
+    "email": {
+      "subject": "Bonjour Imad",
+      "body": "Bonjour Imad,"
+    }
+  },
+  "footer": {
+    "credits": "CRÉDITS",
+    "copyright": "© 2024-{{year}} | ImFix"
+  }
+}

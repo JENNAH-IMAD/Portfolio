@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react';
+﻿import { useEffect, useRef } from 'react';
+import { useTranslation } from "react-i18next";
 import { InfoHero } from "../constants";
 import useMagnetic from "../hooks/useMagnetic";
 import gsap from "gsap";
@@ -12,6 +13,7 @@ const MagneticLink = ({ href, children, ...props }) => {
 };
 
 const Footer = () => {
+  const { t } = useTranslation();
   const footerRef = useRef(null);
 
   useEffect(() => {
@@ -41,7 +43,7 @@ const Footer = () => {
 
         {/* Credits */}
         <div className="text-right">
-          <h3 className="text-white text-sm font-bold uppercase mb-4">CREDITS</h3>
+          <h3 className="text-white text-sm font-bold uppercase mb-4">{t("footer.credits")}</h3>
           <MagneticLink
             href="https://stormix.co/"
             target="_blank"
@@ -55,7 +57,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="container mx-auto mt-12 text-center text-gray-500 text-sm relative z-10">
-        © 2024-{new Date().getFullYear()} | ImFix
+        {t("footer.copyright", { year: new Date().getFullYear() })}
       </div>
     </footer>
   );

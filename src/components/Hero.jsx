@@ -1,6 +1,6 @@
-import { useEffect, useRef, lazy, Suspense } from "react";
+﻿import { useEffect, useRef, lazy, Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import { InfoHero } from "../constants";
-import { HERO_CONTENT } from "../constants";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import gsap from "gsap";
@@ -8,6 +8,7 @@ import gsap from "gsap";
 const HeroCanvas = lazy(() => import("./HeroCanvas"));
 
 const Hero = () => {
+  const { t } = useTranslation();
   const nameRef = useRef(null);
   const ctaRef = useRef(null);
 
@@ -41,6 +42,8 @@ const Hero = () => {
   }, []);
 
   const nameText = "Jennah Imad";
+  const roles = t("hero.roles", { returnObjects: true });
+  const roleSequence = Array.isArray(roles) ? roles.flatMap((role) => [role, 1200]) : [roles, 1200];
 
   return (
     <div className="py-4 lg:-mb-20 relative">
@@ -103,13 +106,7 @@ const Hero = () => {
             >
               <span className="bg-gradient-to-r from-stone-300 to-stone-500 bg-clip-text text-xl sm:text-2xl md:text-3xl tracking-tight text-transparent">
                 <TypeAnimation
-                  sequence={[
-                    "Software Engineer", 1200,
-                    "Full-Stack Web Developer", 1200,
-                    "Project Study & Conception", 1200,
-                    "Machine Learning", 1200,
-                    "Data Scientist & Analyst", 1200
-                  ]}
+                  sequence={roleSequence}
                   wrapper="span"
                   repeat={Infinity}
                 />
@@ -125,7 +122,7 @@ const Hero = () => {
               }}
               transition={{ duration: 0.8, ease: "easeInOut", delay: 0.5 }}
             >
-              {HERO_CONTENT}
+              {t("hero.description")}
             </motion.p>
 
             {/* CTA Button */}
@@ -137,7 +134,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="mt-2 mb-10 bg-white rounded-full px-7 py-3 text-sm font-medium text-stone-800 shadow-lg transition-all duration-300 hover:bg-stone-200 active:scale-95 opacity-0"
             >
-              Download Resume
+              {t("hero.cta")}
             </a>
           </motion.div>
         </div>
@@ -161,7 +158,7 @@ const Hero = () => {
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
-        <span className="text-stone-500 text-xs mt-2 tracking-widest uppercase">Scroll</span>
+        <span className="text-stone-500 text-xs mt-2 tracking-widest uppercase">{t("hero.scroll")}</span>
       </motion.div>
 
       {/* Divider */}

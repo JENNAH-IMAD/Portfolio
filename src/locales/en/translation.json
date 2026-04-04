@@ -1,0 +1,367 @@
+﻿{
+  "meta": {
+    "title": "ImFix | Jennah Imad",
+    "description": "Full-stack portfolio of Jennah Imad, featuring projects, experience, and certifications in software development.",
+    "ogTitle": "ImFix | Jennah Imad",
+    "ogDescription": "Full-stack portfolio of Jennah Imad, featuring projects, experience, and certifications in software development."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "technologies": "Technologies",
+    "timeline": "Timeline",
+    "experiences": "Experiences",
+    "projects": "Projects",
+    "certification": "Certification",
+    "contact": "Contact",
+    "toggleMenu": "Toggle menu"
+  },
+  "language": {
+    "label": "Language",
+    "fr": "FR",
+    "en": "EN"
+  },
+  "hero": {
+    "roles": [
+      "Software Engineer",
+      "Full-Stack Web Developer",
+      "Project Study & Conception",
+      "Machine Learning",
+      "Data Scientist & Analyst"
+    ],
+    "description": "I am a computer and network engineer specialized in MIAGE (Computer Methods Applied to Business Management). Passionate about software development and new technologies, I have worked on several projects using Spring Boot, React, Angular, and Machine Learning. I also have solid skills in project management, particularly in project study, analysis, and UML-based design. I apply structured and scalable approaches to build efficient solutions. Constantly learning and improving, I enjoy tackling challenges and delivering high-quality digital products. I am currently seeking a new opportunity to grow professionally and contribute to meaningful projects.",
+    "cta": "Download Resume",
+    "scroll": "Scroll"
+  },
+  "preloader": {
+    "subtitle": "Full Stack Developer"
+  },
+  "marquee": {
+    "primary": [
+      "Full Stack Developer",
+      "React",
+      "Spring Boot",
+      "Angular",
+      "Next.js",
+      "Python",
+      "Machine Learning",
+      "DevOps",
+      "Java",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Tailwind CSS",
+      ".NET"
+    ],
+    "secondary": [
+      "Projects",
+      "Innovation",
+      "Web Development",
+      "Mobile Apps",
+      "AI",
+      "Cloud",
+      "Microservices",
+      "REST API",
+      "Agile",
+      "CI/CD",
+      "UX Design",
+      "Open Source"
+    ]
+  },
+  "about": {
+    "title": "About me",
+    "subtitle": "Computer Engineering and Networks specialist, with a focus on MIAGE (IT Methods Applied to Business Management)",
+    "sections": [
+      "I\u0027m an <highlight>Computer and Network Engineer</highlight>, specializing in MIAGE (IT Methods Applied to Business Management). My profile combines <highlight>technical expertise</highlight> with a strategic business-oriented vision.",
+      "My journey began at <emsiLink><emsi>\u00c9cole Marocaine Des Sciences de L\u0027ing\u00e9nierie (EMSI)</emsi></emsiLink> in Casablanca, where I pursued my engineering degree from 2019 to 2024. Prior to that, I completed two preparatory years and obtained my <highlight>Baccalaur\u00e9at in Physical Sciences</highlight> from Institut MAJORELLE.",
+      "During my academic journey, I\u0027ve developed a <highlight>versatile skill set</highlight> spanning from software development to data science and machine learning. This diversity allows me to approach IT challenges from various perspectives, combining <highlight>technical understanding</highlight> with business management vision.",
+      "Most recently, I completed an internship at <munisysLink><munisys>MUNISYS</munisys></munisysLink> (March to September 2024), where I designed and developed a module for managing IT equipment requests, using <spring>Spring</spring>, <react>React.js</react>, <ant>AntDesign</ant>, and <sqlServer>SQL Server</sqlServer>.",
+      "Before that, I interned at <eurafricLink><eurafric>EURAFRIC</eurafric></eurafricLink> (July to September 2023) as a full-stack web developer, creating an application to evaluate the maturity of DevOps and Agile teams using <spring>Spring</spring>, <angular>Angular</angular>, <bootstrap>Bootstrap</bootstrap>, and <mysql>MySQL</mysql>.",
+      "My academic projects include developing a <highlight>stock management web application</highlight>, an IT park management system, and an insect detection application using <cnn>CNN (Convolutional Neural Network)</cnn> with <flutter>Flutter</flutter> and <python>Python</python>.",
+      "I\u0027m proficient in multiple <highlight>programming languages and frameworks</highlight> including <cpp>C/C++</cpp>, <csharp>C#/ADO.net</csharp>, <java>Java</java>/<spring>Spring</spring>, <python>Python</python> with <django>Django</django>/<flask>Flask</flask>/<tensorflow>TensorFlow</tensorflow>, and <javascript>JavaScript</javascript> with <node>Node.js</node>, <react>React</react>, and <angular>Angular</angular>. My database expertise spans <mysql>MySQL</mysql>, <sql>SQL</sql>, <plsql>PL/SQL</plsql>, <nosql>NoSQL</nosql>, <postgres>PostgreSQL</postgres>, and <mongo>MongoDB</mongo>.",
+      "I\u0027m currently seeking new <highlight>professional challenges</highlight> where I can fully utilize my diverse skills and significantly contribute to <highlight>innovative projects</highlight>."
+    ]
+  },
+  "technologies": {
+    "title": "Technologies",
+    "subtitle": "Here are some of the technologies I\u0027m proficient with and use in my development projects."
+  },
+  "timeline": {
+    "title": "Timeline",
+    "subtitle": "My professional journey and experience in the field of software development.",
+    "items": [
+      {
+        "title": "Academic Project - Frontend Web Site",
+        "company": "EMSI",
+        "start": 2020,
+        "end": 2020,
+        "description": "Developed a basic frontend booking website as part of an academic project.",
+        "technologies": ["HTML", "CSS", "JavaScript"]
+      },
+      {
+        "title": "Academic Project - Desktop Application",
+        "company": "EMSI",
+        "start": 2021,
+        "end": 2021,
+        "description": "Built a desktop application for managing the school\u0027s IT asset inventory.",
+        "technologies": ["C#", "ADO.NET", "SQL Server", "Windows Forms"]
+      },
+      {
+        "title": "Academic Project - Machine Learning Developer",
+        "company": "EMSI (Final Year Project)",
+        "start": 2022,
+        "end": 2022,
+        "description": "Built machine learning models to detect student performance patterns and integrated them into a Flask-based web application.",
+        "technologies": ["Python", "Scikit-Learn", "Pandas", "Flask"]
+      },
+      {
+        "title": "Full Stack Web Developer Intern",
+        "company": "Eurafric Information",
+        "start": 2023,
+        "end": 2023,
+        "description": "Developed a full stack web application for assessing the DevOps and Agile maturity of development teams, using Spring Boot, Angular, and MySQL, with JWT-based role authentication.",
+        "technologies": ["Spring Boot", "Angular", "MySQL", "JWT", "REST API"]
+      },
+      {
+        "title": "Full Stack Web Developer Intern",
+        "company": "Munisys",
+        "start": 2024,
+        "end": 2024,
+        "description": "Led the development of a full stack internal module using React.js and Spring Boot, implementing secure JWT-based authentication and integrating with SQL Server.",
+        "technologies": ["Spring Boot", "React.js", "SQL Server", "JWT", "REST API"]
+      },
+      {
+        "title": "Freelance Full Stack Web Developer",
+        "company": "Remote",
+        "start": 2025,
+        "end": 2025,
+        "description": "Designed and deployed a full stack web application for managing meeting room reservations, using ASP.NET Core Web API, React.js, Tailwind CSS, and PostgreSQL, deployed on Azure/AWS.",
+        "technologies": ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+      }
+    ]
+  },
+  "experiences": {
+    "title": "Experience",
+    "subtitle": "My professional journey and the roles that shaped my expertise in software development.",
+    "skillsTitle": "Skills",
+    "items": [
+      {
+        "year": "02/2025 - 06/2025",
+        "role": "Freelance Full Stack Web Developer",
+        "company": "Remote",
+        "description": [
+          "Designed, developed, and deployed a full stack web application for managing meeting room reservations for a company. Built the backend with ASP.NET Core Web API and the frontend with React.js and Tailwind CSS, backed by a PostgreSQL database. Deployed the application on Azure/AWS for scalability and reliability. This freelance project strengthened my ability to independently manage the full software development lifecycle, from client requirements gathering to production deployment."
+        ],
+        "technologies": ["ASP.NET Core Web API", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+      },
+      {
+        "year": "03/2024 - 09/2024",
+        "role": "Full Stack Web Developer Intern",
+        "company": "Munisys - Ville Verte Bouskoura",
+        "description": [
+          "As a full stack web developer intern, I was responsible for leading the development of a key internal module, working directly with business stakeholders to gather requirements and transform them into a scalable and maintainable solution. I engaged in cross-functional collaboration to design robust backend architectures using Spring Boot and built responsive, user-friendly interfaces with React.js. Throughout the project, I emphasized security best practices by implementing JWT-based authentication and ensured smooth integration with SQL Server. This experience significantly strengthened my problem-solving abilities and deepened my understanding of enterprise-level software delivery."
+        ],
+        "technologies": ["Spring Boot", "React.js", "AntDesign", "SQL Server", "JWT", "REST API"]
+      },
+      {
+        "year": "07/2023 - 09/2023",
+        "role": "Full Stack Web Developer Intern",
+        "company": "Eurafric Information - Ville Verte Bouskoura",
+        "description": [
+          "During this internship, I developed a full stack web application for assessing the DevOps and Agile maturity levels of development teams. I was responsible for designing and implementing the application using Spring Boot, Angular, and MySQL, integrating role-based access control with JWT authentication. This project allowed me to tackle challenges such as aligning business requirements with technical solutions, optimizing backend performance, and ensuring a smooth user experience, ultimately enhancing my adaptability and technical versatility."
+        ],
+        "technologies": ["Spring Boot", "Angular", "Bootstrap", "MySQL", "JWT", "REST API"]
+      },
+      {
+        "year": "12/2023 - 02/2024",
+        "role": "Academic Project - Team Lead",
+        "company": "EMSI Casablanca",
+        "description": [
+          "As the team lead for this academic project, I managed the planning, task distribution, and delivery of a full stack web application for inventory management. The system was developed using Angular, Spring Boot, and MySQL, with JWT-based authentication supporting both admin and regular user roles. I applied agile methodologies, coordinated regular stand-ups, and ensured adherence to deadlines, while also playing a key role in stakeholder communication and project reporting. This experience strengthened my leadership, organizational, and technical skills."
+        ],
+        "technologies": ["Spring Boot", "Angular", "Bootstrap", "MySQL", "JWT", "REST API"]
+      },
+      {
+        "year": "06/2022 - 09/2022",
+        "role": "Academic Project - Backend Developer",
+        "company": "EMSI Casablanca",
+        "description": [
+          "In this academic initiative, I focused on developing backend components for a desktop application dedicated to IT asset management. I worked on designing an efficient relational database schema and implemented core backend logic using C# and ADO.NET. This experience enhanced my understanding of software architecture for Windows-based environments and taught me how to handle critical aspects like data integrity and system performance in real-world scenarios."
+        ],
+        "technologies": ["C#", "ADO.NET", "SQL Server", "Windows Forms"]
+      }
+    ],
+    "skills": [
+      {
+        "label": "Frontend",
+        "items": ["React.js", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS", "Bootstrap", "AntDesign", "Redux Toolkit", "Zustand", "TanStack Query", "Framer Motion", "HTML5", "CSS3", "Vite"]
+      },
+      {
+        "label": "Backend",
+        "items": ["Spring Boot", "ASP.NET Core", "Node.js", "Django", "Flask", "Entity Framework Core", "SignalR", "REST API", "JWT", "Swagger", "Serilog"]
+      },
+      {
+        "label": "Languages",
+        "items": ["Java", "Python", "JavaScript", "TypeScript", "C#", "C", "C++"]
+      },
+      {
+        "label": "Database",
+        "items": ["PostgreSQL", "MySQL", "SQL Server", "MongoDB"]
+      },
+      {
+        "label": "DevOps & Cloud",
+        "items": ["Docker", "Docker Compose", "Nginx", "Git", "GitHub Actions", "Google Cloud Platform", "Terraform", "Vercel"]
+      },
+      {
+        "label": "Real-time & Media",
+        "items": ["SignalR", "WebRTC", "WebSocket"]
+      },
+      {
+        "label": "Systems & Infra",
+        "items": ["Linux (Ubuntu)", "Windows Server", "Bash", "PowerShell", "VirtualBox"]
+      },
+      {
+        "label": "Methodology",
+        "items": ["Agile", "Scrum", "UML", "MERISE"]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Here are some of the projects I\u0027ve worked on. Click a card or the Live Preview button to explore.",
+    "buttons": {
+      "github": "GitHub",
+      "live": "Live Preview"
+    },
+    "items": [
+      {
+        "title": "IT Equipment Management System",
+        "description": [
+          "Full-stack module for managing IT equipment requests with approval workflow",
+          "Reduced processing time by 40% through automation",
+          "Role-based access control for different organizational levels",
+          "Interactive dashboards for real-time tracking"
+        ]
+      },
+      {
+        "title": "DevOps Maturity Assessment",
+        "description": [
+          "Web application for evaluating DevOps practices maturity level",
+          "Dynamic questionnaire with conditional branching",
+          "Scoring algorithms across 5 capability dimensions",
+          "Benchmarking against industry standards"
+        ]
+      },
+      {
+        "title": "Portfolio",
+        "description": [
+          "Interactive modern portfolio showcasing projects and skills",
+          "Responsive design for all device sizes",
+          "Animated elements for enhanced user experience",
+          "Clean and professional layout"
+        ]
+      },
+      {
+        "title": "Insect Detection App",
+        "description": [
+          "CNN-based application for insect classification with 95% accuracy",
+          "Android mobile interface for easy field use",
+          "Image preprocessing pipeline for better detection",
+          "Support for 15+ common insect species"
+        ]
+      },
+      {
+        "title": "Meeting Planner System Web Application",
+        "description": [
+          "Web application for managing and planning team meetings",
+          "Room reservation system based on availability",
+          "Conflict-free scheduling to optimize team calendars",
+          "User-friendly interface for booking and managing meetings"
+        ]
+      },
+      {
+        "title": "Kechmara Restaurant",
+        "description": [
+          "Modern restaurant website with elegant design and smooth animations",
+          "Fully responsive layout optimized for all screen sizes",
+          "Interactive menu showcase with dynamic content sections",
+          "Deployed on Vercel for fast, global availability"
+        ]
+      },
+      {
+        "title": "Team Talk - Meeting Room Reservation",
+        "description": [
+          "Full stack web application for managing meeting room reservations",
+          "Built with ASP.NET Core Web API backend and React.js frontend",
+          "PostgreSQL database for reliable data persistence",
+          "Deployed on Azure/AWS for scalability and availability"
+        ]
+      }
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "subtitle": "Professional certifications that reflect my commitment to continuous learning and growth.",
+    "view": "View Certificate",
+    "items": [
+      {
+        "title": "Modeling Software Systems using UML",
+        "issuer": "Coursera \u00b7 Hong Kong University"
+      },
+      {
+        "title": "Android App Development",
+        "issuer": "Coursera \u00b7 Specialization"
+      },
+      {
+        "title": "Java FullStack Developer",
+        "issuer": "Coursera \u00b7 Specialization"
+      },
+      {
+        "title": "Machine Learning with Python",
+        "issuer": "Coursera \u00b7 IBM"
+      },
+      {
+        "title": "DevOps, Cloud, and Agile Foundations",
+        "issuer": "Coursera \u00b7 IBM"
+      },
+      {
+        "title": "Advanced Topics in Database Technologies",
+        "issuer": "Coursera \u00b7 Professional Certificate"
+      },
+      {
+        "title": "Back-End Apps with Node.js and Express",
+        "issuer": "Coursera \u00b7 IBM"
+      },
+      {
+        "title": "Scalable Java Microservices with Spring Boot",
+        "issuer": "Coursera \u00b7 Google Cloud"
+      },
+      {
+        "title": "Advanced React",
+        "issuer": "Coursera \u00b7 Meta"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "I am always on the lookout for new challenges and opportunities to learn and grow. If you have a project or idea that you think I could help with, I would love to hear from you. Please feel free to get in touch through any of the contact methods below.",
+    "labels": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "linkedin": "LinkedIn"
+    },
+    "values": {
+      "address": "Casablanca, Morocco",
+      "linkedin": "LinkedIn Profile"
+    },
+    "email": {
+      "subject": "Hello Imad",
+      "body": "Hi Imad,"
+    }
+  },
+  "footer": {
+    "credits": "CREDITS",
+    "copyright": "\u00a9 2024-{{year}} | ImFix"
+  }
+}

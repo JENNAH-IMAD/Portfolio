@@ -1,14 +1,53 @@
-import { useState, useEffect } from "react";
+﻿import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { InfoHero } from "../constants";
 import { motion, AnimatePresence } from "framer-motion";
 
+const LanguageToggle = ({ current, onChange, ariaLabel, compact = false }) => {
+  return (
+    <div
+      className={`flex items-center gap-1 rounded-full border border-neutral-700/70 bg-black/40 px-2 py-1 ${
+        compact ? "text-[10px]" : "text-[11px]"
+      }`}
+      aria-label={ariaLabel}
+      role="group"
+    >
+      <button
+        type="button"
+        onClick={() => onChange("fr")}
+        className={`px-2 py-0.5 rounded-full transition-colors ${
+          current === "fr" ? "bg-white text-black" : "text-stone-400 hover:text-white"
+        }`}
+      >
+        FR
+      </button>
+      <span className="text-stone-600">/</span>
+      <button
+        type="button"
+        onClick={() => onChange("en")}
+        className={`px-2 py-0.5 rounded-full transition-colors ${
+          current === "en" ? "bg-white text-black" : "text-stone-400 hover:text-white"
+        }`}
+      >
+        EN
+      </button>
+    </div>
+  );
+};
+
 const Navbar = () => {
+  const { t, i18n } = useTranslation();
   const [activeSection, setActiveSection] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const currentLang = (i18n.resolvedLanguage || i18n.language || "fr").slice(0, 2);
+  const changeLanguage = (lng) => {
+    if (lng !== currentLang) i18n.changeLanguage(lng);
+  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -61,13 +100,13 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { id: "about", label: "About" },
-    { id: "technologies", label: "Technologies" },
-    { id: "timeline", label: "Timeline" },
-    { id: "experiences", label: "Experiences" },
-    { id: "projects", label: "Projects" },
-    { id: "certification", label: "Certification" },
-    { id: "contact", label: "Contact" },
+    { id: "about", label: t("nav.about") },
+    { id: "technologies", label: t("nav.technologies") },
+    { id: "timeline", label: t("nav.timeline") },
+    { id: "experiences", label: t("nav.experiences") },
+    { id: "projects", label: t("nav.projects") },
+    { id: "certification", label: t("nav.certification") },
+    { id: "contact", label: t("nav.contact") },
   ];
 
   return (
@@ -82,7 +121,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex flex-shrink-0 items-center">
-          <a href="/Portfolio" aria-label="Home">
+          <a href="/Portfolio" aria-label={t("nav.home")}>
             <motion.img
               src={InfoHero.logo}
               className="mx-1"
@@ -124,14 +163,19 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Desktop Social Icons */}
-        <div className="hidden lg:flex items-center gap-4 text-2xl">
+        {/* Desktop Social Icons + Language */}
+        <div className="hidden lg:flex items-center gap-3">
+          <LanguageToggle
+            current={currentLang}
+            onChange={changeLanguage}
+            ariaLabel={t("language.label")}
+          />
           <motion.a
             href="https://github.com/JENNAH-IMAD"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
-            className="text-stone-400 hover:text-white transition-colors"
+            className="text-2xl text-stone-400 hover:text-white transition-colors"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -144,7 +188,7 @@ const Navbar = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
-            className="text-stone-400 hover:text-[#0077b5] transition-colors"
+            className="text-2xl text-stone-400 hover:text-[#0077b5] transition-colors"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -159,7 +203,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             className="text-white p-2 rounded-lg hover:bg-white/10 transition-colors"
-            aria-label="Toggle menu"
+            aria-label={t("nav.toggleMenu")}
             aria-expanded={isMobileMenuOpen}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -200,27 +244,35 @@ const Navbar = () => {
                 </motion.button>
               ))}
 
-              <div className="flex gap-5 pt-4 text-2xl">
-                <motion.a
-                  href="https://github.com/JENNAH-IMAD"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className="text-stone-400 hover:text-white transition-colors"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  <FaGithub />
-                </motion.a>
-                <motion.a
-                  href="https://www.linkedin.com/in/imad-jennah/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className="text-stone-400 hover:text-[#0077b5] transition-colors"
-                  whileHover={{ scale: 1.2 }}
-                >
-                  <FaLinkedin />
-                </motion.a>
+              <div className="flex items-center justify-between pt-4">
+                <LanguageToggle
+                  current={currentLang}
+                  onChange={changeLanguage}
+                  ariaLabel={t("language.label")}
+                  compact
+                />
+                <div className="flex gap-5 text-2xl">
+                  <motion.a
+                    href="https://github.com/JENNAH-IMAD"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className="text-stone-400 hover:text-white transition-colors"
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <FaGithub />
+                  </motion.a>
+                  <motion.a
+                    href="https://www.linkedin.com/in/imad-jennah/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className="text-stone-400 hover:text-[#0077b5] transition-colors"
+                    whileHover={{ scale: 1.2 }}
+                  >
+                    <FaLinkedin />
+                  </motion.a>
+                </div>
               </div>
             </div>
           </motion.div>

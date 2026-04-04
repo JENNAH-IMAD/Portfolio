@@ -1,7 +1,9 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 
 const Preloader = ({ onComplete }) => {
+  const { t } = useTranslation();
   const containerRef = useRef(null);
   const firstNameRef = useRef(null);
   const lastNameRef = useRef(null);
@@ -144,7 +146,7 @@ const Preloader = ({ onComplete }) => {
         className="text-white/30 text-xs sm:text-sm tracking-[0.4em] uppercase mt-4"
         style={{ opacity: 0 }}
       >
-        Full Stack Developer
+        {t("preloader.subtitle")}
       </p>
     </div>
   );

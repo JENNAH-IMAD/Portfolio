@@ -1,64 +1,15 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from "react-i18next";
 import { motion, AnimatePresence } from 'framer-motion';
 import PropTypes from 'prop-types';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { TIMELINE_STYLES } from "../constants";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const careerData = [
-  {
-    title: "Academic Project - Frontend Web Site",
-    company: "EMSI",
-    start: 2020, end: 2020,
-    color: "bg-green-700", borderColor: "border-green-700", textColor: "text-green-400",
-    description: "Developed a basic frontend booking website as part of an academic project.",
-    technologies: ["HTML", "CSS", "JavaScript"]
-  },
-  {
-    title: "Academic Project - Desktop Application",
-    company: "EMSI",
-    start: 2021, end: 2021,
-    color: "bg-green-700", borderColor: "border-green-700", textColor: "text-green-400",
-    description: "Built a desktop application for managing the school's IT asset inventory.",
-    technologies: ["C#", "ADO.NET", "SQL Server", "Windows Forms"]
-  },
-  {
-    title: "Academic Project - Machine Learning Developer",
-    company: "EMSI (Final Year Project)",
-    start: 2022, end: 2022,
-    color: "bg-green-700", borderColor: "border-green-700", textColor: "text-green-400",
-    description: "Built machine learning models to detect student performance patterns and integrated them into a Flask-based web application.",
-    technologies: ["Python", "Scikit-Learn", "Pandas", "Flask"]
-  },
-  {
-    title: "Full Stack Web Developer Intern",
-    company: "Eurafric Information",
-    start: 2023, end: 2023,
-    color: "bg-blue-600", borderColor: "border-blue-500", textColor: "text-blue-400",
-    description: "Developed a full stack web application for assessing the DevOps and Agile maturity of development teams, using Spring Boot, Angular, and MySQL, with JWT-based role authentication.",
-    technologies: ["Spring Boot", "Angular", "MySQL", "JWT", "REST API"]
-  },
-  {
-    title: "Full Stack Web Developer Intern",
-    company: "Munisys",
-    start: 2024, end: 2024,
-    color: "bg-blue-400", borderColor: "border-blue-300", textColor: "text-blue-300",
-    description: "Led the development of a full stack internal module using React.js and Spring Boot, implementing secure JWT-based authentication and integrating with SQL Server.",
-    technologies: ["Spring Boot", "React.js", "SQL Server", "JWT", "REST API"]
-  },
-  {
-    title: "Freelance Full Stack Web Developer",
-    company: "Remote",
-    start: 2025, end: 2025,
-    color: "bg-purple-500", borderColor: "border-purple-400", textColor: "text-purple-400",
-    description: "Designed and deployed a full stack web application for managing meeting room reservations, using ASP.NET Core Web API, React.js, Tailwind CSS, and PostgreSQL, deployed on Azure/AWS.",
-    technologies: ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
-  }
-];
-
-/* ── Vertical card (mobile / tablet) ── */
-const VerticalJobItem = ({ job, index }) => {
+/* —— Vertical card (mobile / tablet) —— */
+const VerticalJobItem = ({ job, index, total }) => {
   const itemRef = useRef(null);
 
   useEffect(() => {
@@ -78,13 +29,13 @@ const VerticalJobItem = ({ job, index }) => {
     <div ref={itemRef} className="relative flex gap-4 opacity-0">
       <div className="flex flex-col items-center">
         <div className={`w-3 h-3 rounded-full mt-1 flex-shrink-0 ${job.color}`} />
-        {index < careerData.length - 1 && (
+        {index < total - 1 && (
           <div className="w-0.5 bg-neutral-700 flex-1 mt-1" />
         )}
       </div>
       <div className={`mb-8 pb-2 border-l-2 ${job.borderColor} pl-4 flex-1`}>
         <p className={`text-xs font-bold mb-0.5 ${job.textColor}`}>
-          {job.start}{job.end !== job.start ? ` – ${job.end}` : ""}
+          {job.start}{job.end !== job.start ? ` - ${job.end}` : ""}
         </p>
         <h3 className="text-sm font-semibold text-white leading-snug">{job.title}</h3>
         <p className="text-xs text-gray-400 mb-2">{job.company}</p>
@@ -102,9 +53,10 @@ const VerticalJobItem = ({ job, index }) => {
 VerticalJobItem.propTypes = {
   job: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
 };
 
-/* ── Horizontal bar item (desktop) ── */
+/* —— Horizontal bar item (desktop) —— */
 const HorizontalJobItem = ({ job, index }) => {
   const [hovered, setHovered] = useState(false);
   const itemRef = useRef(null);
@@ -155,7 +107,7 @@ const HorizontalJobItem = ({ job, index }) => {
         style={{ transform: "scaleX(0)" }}
       />
       <p className="text-xs text-gray-400">
-        {job.start}{job.end !== job.start ? ` – ${job.end}` : ""}
+        {job.start}{job.end !== job.start ? ` - ${job.end}` : ""}
       </p>
 
       <AnimatePresence>
@@ -170,7 +122,7 @@ const HorizontalJobItem = ({ job, index }) => {
             <h3 className={`font-bold text-sm mb-0.5 ${job.textColor}`}>{job.title}</h3>
             <p className="text-gray-300 text-xs">{job.company}</p>
             <p className="text-gray-400 text-xs mb-2">
-              {job.start}{job.end !== job.start ? ` – ${job.end}` : ""}
+              {job.start}{job.end !== job.start ? ` - ${job.end}` : ""}
             </p>
             <p className="text-gray-300 text-xs mb-3 leading-relaxed">{job.description}</p>
             <div className="flex flex-wrap gap-1">
@@ -190,14 +142,20 @@ HorizontalJobItem.propTypes = {
   index: PropTypes.number.isRequired,
 };
 
-/* ── Main Timeline ── */
+/* —— Main Timeline —— */
 const Timeline = () => {
+  const { t } = useTranslation();
   const timelineRef = useRef(null);
   const titleRef = useRef(null);
   const lineRef = useRef(null);
   const subtitleRef = useRef(null);
   const yearAxisRef = useRef(null);
   const yearsRef = useRef([]);
+
+  const timelineItems = t("timeline.items", { returnObjects: true });
+  const careerData = Array.isArray(timelineItems)
+    ? timelineItems.map((item, index) => ({ ...item, ...TIMELINE_STYLES[index] }))
+    : [];
 
   const years = [2020, 2021, 2022, 2023, 2024, 2025];
 
@@ -251,19 +209,19 @@ const Timeline = () => {
   return (
     <div ref={timelineRef} id="timeline" className="border-b border-neutral-800 py-24">
       <div ref={titleRef} className="pb-2 w-full text-center" style={{ opacity: 0 }}>
-        <h1 className="my-2 text-center text-4xl">Timeline</h1>
+        <h1 className="my-2 text-center text-4xl">{t("timeline.title")}</h1>
         <div ref={lineRef} className="h-1 w-24 bg-gray-500 mx-auto mt-2 origin-left" style={{ transform: "scaleX(0)" }} />
       </div>
 
       <p ref={subtitleRef} className="text-gray-400 text-center mb-10" style={{ opacity: 0 }}>
-        My professional journey and experience in the field of software development.
+        {t("timeline.subtitle")}
       </p>
 
       <div className="container mx-auto px-4 md:px-6">
         {/* Mobile / Tablet: vertical layout */}
         <div className="block xl:hidden max-w-lg mx-auto">
           {careerData.map((job, index) => (
-            <VerticalJobItem key={index} job={job} index={index} />
+            <VerticalJobItem key={index} job={job} index={index} total={careerData.length} />
           ))}
         </div>
 
@@ -301,3 +259,4 @@ const Timeline = () => {
 };
 
 export default Timeline;
+

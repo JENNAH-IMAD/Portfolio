@@ -1,4 +1,5 @@
-import { useState, lazy, Suspense } from "react";
+﻿import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Technologies from "./components/Technologies";
@@ -16,7 +17,34 @@ import useSmoothScroll from "./hooks/useSmoothScroll";
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { t, i18n } = useTranslation();
   useSmoothScroll();
+
+  useEffect(() => {
+    const lang = i18n.resolvedLanguage || i18n.language || "fr";
+    document.documentElement.lang = lang;
+
+    const setMeta = (attr, attrValue, content) => {
+      if (!content) return;
+      let el = document.querySelector(`meta[${attr}="${attrValue}"]`);
+      if (!el) {
+        el = document.createElement("meta");
+        el.setAttribute(attr, attrValue);
+        document.head.appendChild(el);
+      }
+      el.setAttribute("content", content);
+    };
+
+    document.title = t("meta.title");
+    setMeta("name", "description", t("meta.description"));
+    setMeta("property", "og:title", t("meta.ogTitle"));
+    setMeta("property", "og:description", t("meta.ogDescription"));
+  }, [i18n.language, t]);
+
+  const marqueePrimary = t("marquee.primary", { returnObjects: true });
+  const marqueeSecondary = t("marquee.secondary", { returnObjects: true });
+  const marqueePrimaryItems = Array.isArray(marqueePrimary) ? marqueePrimary : [];
+  const marqueeSecondaryItems = Array.isArray(marqueeSecondary) ? marqueeSecondary : [];
 
   return (
     <>
@@ -37,7 +65,7 @@ const App = () => {
             <Hero />
           </section>
 
-          <Marquee items={["Full Stack Developer", "React", "Spring Boot", "Angular", "Next.js", "Python", "Machine Learning", "DevOps", "Java", "Node.js", "MongoDB", "PostgreSQL", "Tailwind CSS", ".NET"]} />
+          <Marquee items={marqueePrimaryItems} />
 
           <section id="about">
             <About />
@@ -55,7 +83,7 @@ const App = () => {
             <Experiences />
           </section>
 
-          <Marquee items={["Projects", "Innovation", "Web Development", "Mobile Apps", "AI", "Cloud", "Microservices", "REST API", "Agile", "CI/CD", "UX Design", "Open Source"]} reverse />
+          <Marquee items={marqueeSecondaryItems} reverse />
 
           <section id="projects">
             <Projects />

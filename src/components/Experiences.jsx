@@ -1,11 +1,12 @@
-import { useEffect, useRef } from "react";
-import { EXPERIENCES, SKILLS } from "../constants";
+﻿import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Experiences = () => {
+  const { t, i18n } = useTranslation();
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const lineRef = useRef(null);
@@ -13,6 +14,9 @@ const Experiences = () => {
   const cardsRef = useRef([]);
   const skillsPanelRef = useRef(null);
   const categoriesRef = useRef([]);
+
+  const experiences = t("experiences.items", { returnObjects: true });
+  const skillCategories = t("experiences.skills", { returnObjects: true });
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -101,20 +105,25 @@ const Experiences = () => {
       });
     }, sectionRef);
 
-    return () => ctx.revert();
-  }, []);
+    ScrollTrigger.refresh();
 
-  const skillEntries = Object.entries(SKILLS);
+    return () => ctx.revert();
+  }, [i18n.language]);
+
+  const experienceList = Array.isArray(experiences) ? experiences : [];
+  const skillEntries = Array.isArray(skillCategories) ? skillCategories : [];
+  cardsRef.current = [];
+  categoriesRef.current = [];
 
   return (
     <div ref={sectionRef} id="experiences" className="border-b border-neutral-800 py-24">
       {/* Title */}
       <div ref={titleRef} className="pb-2 w-full text-center" style={{ opacity: 0 }}>
-        <h1 className="my-2 text-center text-4xl">Experience</h1>
+        <h1 className="my-2 text-center text-4xl">{t("experiences.title")}</h1>
         <div ref={lineRef} className="h-1 w-24 bg-gray-500 mx-auto mt-2 origin-left" style={{ transform: "scaleX(0)" }} />
       </div>
       <p ref={subtitleRef} className="text-gray-400 text-center mb-12 container mx-auto px-6" style={{ opacity: 0 }}>
-        My professional journey and the roles that shaped my expertise in software development.
+        {t("experiences.subtitle")}
       </p>
 
       {/* 2-column layout */}
@@ -122,7 +131,7 @@ const Experiences = () => {
         <div className="exp-grid">
           {/* Left — Experience cards */}
           <div className="exp-left">
-            {EXPERIENCES.map((exp, i) => (
+            {experienceList.map((exp, i) => (
               <div
                 key={i}
                 ref={(el) => (cardsRef.current[i] = el)}
@@ -161,21 +170,21 @@ const Experiences = () => {
               className="exp-skills-panel"
               style={{ opacity: 0 }}
             >
-              <h3 className="exp-skills-title">Skills</h3>
+              <h3 className="exp-skills-title">{t("experiences.skillsTitle")}</h3>
 
               <div className="exp-skills-list">
-                {skillEntries.map(([category, skills], i) => (
+                {skillEntries.map((category, i) => (
                   <div
-                    key={category}
+                    key={`${category.label}-${i}`}
                     ref={(el) => (categoriesRef.current[i] = el)}
                     className="exp-skill-category"
                     style={{ opacity: 0 }}
                   >
                     <p className="exp-cat-label">
-                      <span className="exp-cat-slash">//</span> {category}
+                      <span className="exp-cat-slash">//</span> {category.label}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                      {skills.map((skill, j) => (
+                    <div className="flex flex-wrap gap-1.5">
+                      {category.items.map((skill, j) => (
                         <span key={j} className="skill-badge">{skill}</span>
                       ))}
                     </div>
@@ -188,7 +197,7 @@ const Experiences = () => {
       </div>
 
       <style>{`
-        /* ── Grid ── */
+        /* —— Grid —— */
         .exp-grid {
           display: grid;
           grid-template-columns: 1fr;
@@ -201,14 +210,14 @@ const Experiences = () => {
           }
         }
 
-        /* ── Left column ── */
+        /* —— Left column —— */
         .exp-left {
           display: flex;
           flex-direction: column;
           gap: 24px;
         }
 
-        /* ── Card ── */
+        /* —— Card —— */
         .exp-card {
           position: relative;
           padding-left: 20px;
@@ -270,49 +279,49 @@ const Experiences = () => {
           color: #fff;
         }
 
-        /* ── Right column ── */
+        /* —— Right column —— */
         .exp-right {
           position: relative;
         }
         @media (min-width: 1024px) {
           .exp-right {
             position: sticky;
-            top: 100px;
+            top: 80px;
             align-self: start;
           }
         }
 
-        /* ── Skills panel ── */
+        /* —— Skills panel —— */
         .exp-skills-panel {
           background: rgba(23, 23, 23, 0.6);
           border: 1px solid rgba(255, 255, 255, 0.06);
           border-radius: 12px;
-          padding: 24px 26px;
+          padding: 20px 22px;
         }
         .exp-skills-title {
-          font-size: 20px;
+          font-size: 18px;
           font-weight: 700;
           color: #fff;
-          margin-bottom: 22px;
+          margin-bottom: 14px;
         }
         .exp-skills-list {
           display: flex;
           flex-direction: column;
-          gap: 18px;
+          gap: 12px;
         }
         .exp-cat-label {
-          font-size: 13px;
+          font-size: 12px;
           font-weight: 600;
           color: #aaa;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
           font-family: "JetBrains Mono", "Fira Code", "Consolas", monospace;
         }
         .exp-cat-slash {
           color: #666;
         }
         .skill-badge {
-          font-size: 12px;
-          padding: 5px 14px;
+          font-size: 11px;
+          padding: 4px 10px;
           border-radius: 6px;
           background: rgba(255, 255, 255, 0.08);
           color: #ccc;
@@ -324,15 +333,22 @@ const Experiences = () => {
           color: #fff;
         }
 
-        /* ── Mobile badges ── */
+        /* —— Mobile badges —— */
         @media (max-width: 767px) {
+          .exp-skills-title {
+            font-size: 16px;
+            margin-bottom: 12px;
+          }
+          .exp-skills-list {
+            gap: 10px;
+          }
           .skill-badge {
-            font-size: 11px;
-            padding: 4px 10px;
+            font-size: 10px;
+            padding: 3px 8px;
           }
         }
 
-        /* ── Reduced motion ── */
+        /* —— Reduced motion —— */
         @media (prefers-reduced-motion: reduce) {
           .exp-card, .exp-card-inner, .exp-border-line,
           .exp-badge, .skill-badge { transition: none !important; }
@@ -343,3 +359,8 @@ const Experiences = () => {
 };
 
 export default Experiences;
+
+
+
+
+

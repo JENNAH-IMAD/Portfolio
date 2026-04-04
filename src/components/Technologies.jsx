@@ -1,4 +1,5 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { RiReactjsLine } from "react-icons/ri";
 import { TbBrandNextjs } from "react-icons/tb";
 import { SiSpring, SiMicrosoftsqlserver, SiMysql, SiPostgresql, SiAngular, SiPython, SiJavascript, SiMongodb, SiDotnet, SiPhp, SiGit, SiFigma, SiTailwindcss } from "react-icons/si";
@@ -26,6 +27,7 @@ const techItems = [
 ];
 
 const Technologies = () => {
+  const { t } = useTranslation();
   const sectionRef = useRef(null);
   const iconsRef = useRef([]);
   const titleRef = useRef(null);
@@ -86,7 +88,7 @@ const Technologies = () => {
   return (
     <div ref={sectionRef} className="border-b border-neutral-800 py-24">
       <div ref={titleRef} className="pb-2 w-full text-center" style={{ opacity: 0 }}>
-        <h1 className="my-2 text-center text-4xl">Technologies</h1>
+        <h1 className="my-2 text-center text-4xl">{t("technologies.title")}</h1>
         <div
           ref={lineRef}
           className="h-1 w-24 bg-gray-500 mx-auto mt-2 origin-left"
@@ -95,7 +97,7 @@ const Technologies = () => {
       </div>
 
       <p ref={subtitleRef} className="text-gray-400 text-center mb-8" style={{ opacity: 0 }}>
-        Here are some of the technologies I&apos;m proficient with and use in my development projects.
+        {t("technologies.subtitle")}
       </p>
 
       <div className="flex flex-wrap items-center justify-center gap-4">
