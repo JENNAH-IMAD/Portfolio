@@ -54,13 +54,13 @@ Live site: https://jennah-imad.github.io/Portfolio/
 - Insect Detection App - Flutter, Python, TensorFlow, CNN
   GitHub: https://github.com/JENNAH-IMAD/Insect-detector
 
-- Meeting Planner - Spring, React.js, MySQL
+- Meeting Planner - Room booking dashboard with real-time conflict detection, interactive calendar, admin controls, dark/light modes; Spring, React.js, MySQL
   GitHub: https://github.com/JENNAH-IMAD/Meeting-Planner | Live: https://meeting-planner-ten.vercel.app/
 
-- Kechmara Restaurant - React.js, Tailwind CSS, Framer Motion
+- Kechmara Online Boutique - Online boutique brand website showcasing products and collections; React.js, Tailwind CSS, Framer Motion
   GitHub: https://github.com/JENNAH-IMAD/kechmara | Live: https://kechmara.vercel.app/
 
-- Team Talk - ASP.NET Core, React.js, Tailwind CSS, PostgreSQL
+- TeamTalk - Enterprise communication platform with chat, audio/video calls, file sharing, team management; ASP.NET Core, React.js, Tailwind CSS, PostgreSQL
   GitHub: https://github.com/JENNAH-IMAD/Team-Talk | Live: https://teamt.vercel.app
 
 ---
@@ -153,3 +153,6 @@ Runs `vite build` then publishes `dist/` to the `gh-pages` branch.
 ## License
 
 MIT
+
+
+

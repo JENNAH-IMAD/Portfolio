@@ -270,31 +270,31 @@
           "Support for 15+ common insect species"
         ]
       },
-      {
-        "title": "Meeting Planner System Web Application",
+            {
+        "title": "Meeting Planner - Meeting Space Management",
         "description": [
-          "Web application for managing and planning team meetings",
-          "Room reservation system based on availability",
-          "Conflict-free scheduling to optimize team calendars",
-          "User-friendly interface for booking and managing meetings"
+          "Single dashboard to browse available rooms",
+          "Create reservations with real-time conflict detection",
+          "Interactive calendar view for all upcoming meetings",
+          "Admin controls for rooms and users with polished dark and light modes"
         ]
       },
-      {
-        "title": "Kechmara Restaurant",
+            {
+        "title": "Kechmara Online Boutique",
         "description": [
-          "Modern restaurant website with elegant design and smooth animations",
-          "Fully responsive layout optimized for all screen sizes",
-          "Interactive menu showcase with dynamic content sections",
-          "Deployed on Vercel for fast, global availability"
+          "Online boutique brand website for Kechmara",
+          "Showcases products and collections with clear sections",
+          "Modern, responsive layout optimized for all screens",
+          "Smooth animations and fast deployment on Vercel"
         ]
       },
-      {
-        "title": "Team Talk - Meeting Room Reservation",
+            {
+        "title": "TeamTalk - Enterprise Communication Platform",
         "description": [
-          "Full stack web application for managing meeting room reservations",
-          "Built with ASP.NET Core Web API backend and React.js frontend",
-          "PostgreSQL database for reliable data persistence",
-          "Deployed on Azure/AWS for scalability and availability"
+          "Full-stack platform that centralizes team communication",
+          "Instant messaging, audio/video calls, and file sharing",
+          "Team and member management in one place",
+          "Real-time experience for fast collaboration"
         ]
       }
     ]
@@ -365,3 +365,6 @@
     "copyright": "\u00a9 2024-{{year}} | ImFix"
   }
 }
+
+
+

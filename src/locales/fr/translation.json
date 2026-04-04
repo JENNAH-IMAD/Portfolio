@@ -270,31 +270,31 @@
           "Support de plus de 15 espèces d'insectes courantes"
         ]
       },
-      {
-        "title": "Application web de planification de réunions",
+            {
+        "title": "Meeting Planner - Gestion des salles de réunion",
         "description": [
-          "Application web pour gérer et planifier les réunions d'équipe",
-          "Système de réservation de salles basé sur les disponibilités",
-          "Planification sans conflits pour optimiser les agendas",
-          "Interface conviviale pour réserver et gérer les réunions"
+          "Tableau de bord unique pour consulter les salles disponibles",
+          "Création de réservations avec détection de conflits en temps réel",
+          "Calendrier interactif pour visualiser toutes les réunions à venir",
+          "Administration complète des salles et des comptes, avec modes clair/sombre"
         ]
       },
-      {
-        "title": "Restaurant Kechmara",
+            {
+        "title": "Kechmara - Boutique en ligne",
         "description": [
-          "Site web de restaurant moderne avec design élégant et animations fluides",
-          "Mise en page responsive optimisée pour tous les écrans",
-          "Mise en avant interactive du menu avec sections dynamiques",
-          "Déployé sur Vercel pour une disponibilité rapide et globale"
+          "Site de boutique en ligne pour la marque Kechmara",
+          "Mise en avant des produits et collections avec sections dédiées",
+          "Design moderne et responsive pour une expérience fluide sur mobile",
+          "Animations légères et déploiement rapide sur Vercel"
         ]
       },
-      {
-        "title": "Team Talk - Réservation de salles de réunion",
+            {
+        "title": "TeamTalk - Plateforme de communication",
         "description": [
-          "Application web full-stack pour gérer les réservations de salles de réunion",
-          "Backend ASP.NET Core Web API et frontend React.js",
-          "Base PostgreSQL pour une persistance fiable des données",
-          "Déployé sur Azure/AWS pour la scalabilité et la disponibilité"
+          "Plateforme de communication d'entreprise full-stack pour centraliser les échanges",
+          "Messagerie instantanée, appels audio/vidéo et partage de fichiers",
+          "Gestion des équipes et des membres dans un espace unifié",
+          "Temps réel pour une collaboration rapide et efficace"
         ]
       }
     ]
@@ -365,3 +365,6 @@
     "copyright": "© 2024-{{year}} | ImFix"
   }
 }
+
+
+
