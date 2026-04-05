@@ -10,6 +10,17 @@
   scroll-behavior: smooth;
 }
 
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* ── Custom scrollbar ──────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 5px;

@@ -9,6 +9,8 @@ const useSmoothScroll = () => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    const htmlEl = document.documentElement;
+    const bodyEl = document.body;
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isTouch =
       window.matchMedia("(pointer: coarse)").matches ||
@@ -18,6 +20,8 @@ const useSmoothScroll = () => {
     // Avoid smooth scrolling on touch devices or when reduced motion is preferred
     if (prefersReducedMotion || isTouch) {
       window.lenis = null;
+      htmlEl.classList.remove("lenis", "lenis-smooth", "lenis-stopped");
+      bodyEl.classList.remove("lenis", "lenis-smooth", "lenis-stopped");
       return;
     }
 
@@ -43,6 +47,8 @@ const useSmoothScroll = () => {
       lenis.destroy();
       window.lenis = null;
       gsap.ticker.remove(raf);
+      htmlEl.classList.remove("lenis", "lenis-smooth", "lenis-stopped");
+      bodyEl.classList.remove("lenis", "lenis-smooth", "lenis-stopped");
     };
   }, []);
 };

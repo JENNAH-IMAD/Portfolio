@@ -1,4 +1,4 @@
-import { Suspense, useRef, useMemo } from "react";
+import { Suspense, useEffect, useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Stars } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
@@ -7,7 +7,7 @@ const AnimatedStars = () => {
   const ref = useRef();
   const mouse = useRef({ x: 0, y: 0 });
 
-  useMemo(() => {
+  useEffect(() => {
     const handleMove = (e) => {
       mouse.current.x = (e.clientX / window.innerWidth - 0.5) * 0.5;
       mouse.current.y = (e.clientY / window.innerHeight - 0.5) * 0.5;
@@ -29,9 +29,27 @@ const AnimatedStars = () => {
 };
 
 const HeroCanvas = () => {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const touchDetected =
+      window.matchMedia("(pointer: coarse)").matches ||
+      navigator.maxTouchPoints > 0 ||
+      "ontouchstart" in window;
+    setIsTouchDevice(touchDetected);
+  }, []);
+
+  if (isTouchDevice) return null;
+
   return (
-    <div className="absolute inset-0 -z-10">
-      <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]} gl={{ antialias: false }}>
+    <div className="absolute inset-0 -z-10 pointer-events-none select-none">
+      <Canvas
+        camera={{ position: [0, 0, 1] }}
+        dpr={[1, 1.5]}
+        gl={{ antialias: false }}
+        style={{ pointerEvents: "none" }}
+      >
         <Suspense fallback={null}>
           <AnimatedStars />
           <EffectComposer>
