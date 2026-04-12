@@ -67,7 +67,7 @@ export const PROJECTS_META = [
     image: PROJECT_IMAGES.project7,
     link: "https://github.com/JENNAH-IMAD/Team-Talk",
     previewLink: "https://teamt.vercel.app",
-    technologies: ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"],
+    technologies: ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Vercel", "Render"],
   },
 ];
 

@@ -135,8 +135,8 @@
         "company": "Remote",
         "start": 2025,
         "end": 2025,
-        "description": "Conception et déploiement d'une application web full-stack pour la gestion des réservations de salles de réunion, avec ASP.NET Core Web API, React.js, Tailwind CSS et PostgreSQL, déployée sur Azure/AWS.",
-        "technologies": ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+        "description": "Conception et déploiement d'une application web full-stack pour la gestion des réservations de salles de réunion, avec ASP.NET Core Web API, React.js, Tailwind CSS et PostgreSQL.",
+        "technologies": ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL"]
       }
     ]
   },
@@ -150,9 +150,9 @@
         "role": "Développeur web full-stack freelance",
         "company": "Remote",
         "description": [
-          "Conception, développement et déploiement d'une application web full-stack de gestion des réservations de salles de réunion pour une entreprise. Backend en ASP.NET Core Web API et frontend en React.js et Tailwind CSS, avec base PostgreSQL. Déploiement sur Azure/AWS pour la scalabilité et la fiabilité. Ce projet freelance a renforcé ma capacité à gérer de manière autonome tout le cycle de développement, de la collecte des besoins à la mise en production."
+          "Conception, développement et déploiement d'une application web full-stack de gestion des réservations de salles de réunion pour une entreprise. Backend en ASP.NET Core Web API et frontend en React.js et Tailwind CSS, avec base PostgreSQL. Ce projet freelance a renforcé ma capacité à gérer de manière autonome tout le cycle de développement, de la collecte des besoins à la mise en production."
         ],
-        "technologies": ["ASP.NET Core Web API", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+        "technologies": ["ASP.NET Core Web API", "React.js", "Tailwind CSS", "PostgreSQL"]
       },
       {
         "year": "03/2024 - 09/2024",
@@ -294,7 +294,7 @@
           "Plateforme de communication d'entreprise full-stack pour centraliser les échanges",
           "Messagerie instantanée, appels audio/vidéo et partage de fichiers",
           "Gestion des équipes et des membres dans un espace unifié",
-          "Temps réel pour une collaboration rapide et efficace"
+          "Déployé avec frontend sur Vercel et backend sur Render pour une mise en production fiable"
         ]
       }
     ]

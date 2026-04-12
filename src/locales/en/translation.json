@@ -135,8 +135,8 @@
         "company": "Remote",
         "start": 2025,
         "end": 2025,
-        "description": "Designed and deployed a full stack web application for managing meeting room reservations, using ASP.NET Core Web API, React.js, Tailwind CSS, and PostgreSQL, deployed on Azure/AWS.",
-        "technologies": ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+        "description": "Designed and deployed a full stack web application for managing meeting room reservations, using ASP.NET Core Web API, React.js, Tailwind CSS, and PostgreSQL.",
+        "technologies": ["ASP.NET Core", "React.js", "Tailwind CSS", "PostgreSQL"]
       }
     ]
   },
@@ -150,9 +150,9 @@
         "role": "Freelance Full Stack Web Developer",
         "company": "Remote",
         "description": [
-          "Designed, developed, and deployed a full stack web application for managing meeting room reservations for a company. Built the backend with ASP.NET Core Web API and the frontend with React.js and Tailwind CSS, backed by a PostgreSQL database. Deployed the application on Azure/AWS for scalability and reliability. This freelance project strengthened my ability to independently manage the full software development lifecycle, from client requirements gathering to production deployment."
+          "Designed, developed, and deployed a full stack web application for managing meeting room reservations for a company. Built the backend with ASP.NET Core Web API and the frontend with React.js and Tailwind CSS, backed by a PostgreSQL database. This freelance project strengthened my ability to independently manage the full software development lifecycle, from client requirements gathering to production deployment."
         ],
-        "technologies": ["ASP.NET Core Web API", "React.js", "Tailwind CSS", "PostgreSQL", "Azure/AWS"]
+        "technologies": ["ASP.NET Core Web API", "React.js", "Tailwind CSS", "PostgreSQL"]
       },
       {
         "year": "03/2024 - 09/2024",
@@ -294,7 +294,7 @@
           "Full-stack platform that centralizes team communication",
           "Instant messaging, audio/video calls, and file sharing",
           "Team and member management in one place",
-          "Real-time experience for fast collaboration"
+          "Deployed with the frontend on Vercel and the backend on Render for reliable production delivery"
         ]
       }
     ]
